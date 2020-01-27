@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">2dp</dimen>
+    <dimen name="card_elevation">100dp</dimen>
+    <dimen name="card_radius">8dp</dimen>
+    <dimen name="card_padding">4dp</dimen>
+    <dimen name="textsize_sp">14sp</dimen>
+</resources>
