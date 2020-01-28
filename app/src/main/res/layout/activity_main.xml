@@ -1,67 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".MainActivity">
 
     <SearchView
         android:id="@+id/searchtab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:iconifiedByDefault="true"
+        android:background="@color/white"
+        android:iconifiedByDefault="false"
         android:queryHint="type to search"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toStartOf="@id/listView"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <requestFocus />
-    </SearchView>
 
-
-    <LinearLayout
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/yellow"
+        android:divider="@color/white"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toTopOf="@id/searchtab"
+        app:layout_constraintEnd_toStartOf="@id/searchtab"
+        app:layout_constraintStart_toStartOf="@id/searchtab"
+        app:layout_constraintTop_toBottomOf="@id/searchtab"
+
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/searchtab"
-        app:layout_constraintTop_toBottomOf="@+id/searchtab">
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:divider="@color/white"
-            android:dividerHeight="1dp"
-            android:layoutAnimation="@anim/layout_animation_right_to_left" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="2"
-                android:background="@color/colorPrimary"
-                android:onClick="order"
-                android:padding="2dp"
-                android:text="submit"
-
-                android:textColor="@color/white" />
-
-
-        </LinearLayout>
-    </LinearLayout>
+        android:onClick="order"
+        android:text="submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintVertical_bias="0.974" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

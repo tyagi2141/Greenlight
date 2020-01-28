@@ -275,7 +275,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     private fun productList() {
-        AndroidNetworking.get("http://rahultyagi.in/testjson")
+        AndroidNetworking.get("http://rahultyagi.in/jsondata")
             .setPriority(Priority.LOW)
             .build()
             .getAsJSONObject(object : JSONObjectRequestListener {
