@@ -36,8 +36,9 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/unit_taget_txt"
+                app:layout_constraintEnd_toEndOf="@+id/product_name_id"
                 app:layout_constraintEnd_toStartOf="@+id/unit_taget_txt"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/product_name_id"
                 tools:ignore="MissingConstraints" />
 
             <TextView
