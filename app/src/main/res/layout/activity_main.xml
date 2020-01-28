@@ -29,6 +29,7 @@
         android:layout_marginBottom="50dp"
         android:background="@color/yellow"
         android:divider="@color/white"
+        android:layoutAnimation="@anim/layout_animation_right_to_left"
         android:dividerHeight="1dp"
         app:layout_constraintBottom_toTopOf="@id/searchtab"
         app:layout_constraintEnd_toStartOf="@id/searchtab"
