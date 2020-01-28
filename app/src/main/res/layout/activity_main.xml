@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/white"
-        android:iconifiedByDefault="false"
+        android:iconifiedByDefault="true"
         android:queryHint="type to search"
         app:layout_constraintEnd_toStartOf="@id/listView"
         app:layout_constraintStart_toEndOf="parent"
