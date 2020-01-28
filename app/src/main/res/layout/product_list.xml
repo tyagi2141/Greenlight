@@ -64,9 +64,9 @@
                 android:id="@+id/product_name_id"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_5dp"
                 android:hint="product"
                 android:textColor="@color/colorAccent"
-
                 app:layout_constraintEnd_toStartOf="@+id/unit_target_id"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,10 +80,11 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="unit"
+
+                android:inputType="phone"
                 android:minWidth="80dp"
                 android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="@+id/unit_taget_txt"
-                app:layout_constraintEnd_toStartOf="@id/revenu_target_id"
                 app:layout_constraintStart_toEndOf="@+id/partner_id"
                 app:layout_constraintStart_toStartOf="@+id/unit_taget_txt"
                 app:layout_constraintTop_toBottomOf="@+id/unit_taget_txt" />
@@ -97,10 +98,12 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="revenu"
+                android:inputType="phone"
                 android:minWidth="80dp"
                 android:singleLine="true"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/revenu_target_txt"
                 app:layout_constraintStart_toEndOf="@+id/unit_target_id"
+                app:layout_constraintStart_toStartOf="@+id/revenu_target_txt"
                 app:layout_constraintTop_toBottomOf="@+id/revenu_target_txt" />
 
             <androidx.constraintlayout.widget.Barrier
