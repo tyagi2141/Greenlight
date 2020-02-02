@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     internal var productList = ArrayList<model>()
 
     internal var productQtyData = "0"
-
+    var unitAndRevenu_Hashmap = HashMap<String, String>()
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -253,10 +253,10 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                 }
                 if (model.revenue_targe == 0) {
 
-                    unitAndRevenu_Hashmap.remove(model.sku_id)
+                    unitAndRevenu_Hashmap.remove(model.partner_name+"="+model.sku_id)
 
                 } else {
-                    unitAndRevenu_Hashmap[model.partner_name] =
+                    unitAndRevenu_Hashmap[model.partner_name+"="+model.sku_id] =
                         model.units_target.toString() + "&&" + model.SKU_Name + "&&" + model.sku_id + "&&" + model.revenue_targe
 
                 }
@@ -323,9 +323,9 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     }
 
-    companion object {
+ /*   companion object {
         var unitAndRevenu_Hashmap = HashMap<String, String>()
-    }
+    }*/
 
 
 }
